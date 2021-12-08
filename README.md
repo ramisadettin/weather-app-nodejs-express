@@ -1,4 +1,7 @@
 # weather-app-nodejs-express
+
+App's URL to try : https://lagger94-weather-application.herokuapp.com/
+
 This app mainly fetch weather information from weatherStack api and uses a user friendly interface to preview the results 
 
 **A screenshot from the home page**	
