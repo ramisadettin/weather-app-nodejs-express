@@ -27,6 +27,9 @@ hbs.registerPartials(partialPath)
 // setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
+//specifying a port for heroku to use if any problems occur port 3000 will be used
+const port = process.env.PORT || 3000   
+
 
 app.get('', (req, res) => {
   res.render('index', {
@@ -101,6 +104,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('server is up on port 3000')
 })
