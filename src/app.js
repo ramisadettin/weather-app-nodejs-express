@@ -47,8 +47,8 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    mTitle: 'from love',
-    mBody: 'hello my Dear i miss you so much',
+    mTitle: 'This is the help page',
+    mBody: 'follow me on github for further details lagger94hub ',
     title: 'Help',
     owner: 'Rami Saad Al Deen'
   })
