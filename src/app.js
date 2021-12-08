@@ -66,16 +66,17 @@ app.get('/weather', (req, res) => {
         error
       })
     }
-    forecast(latitude, longitude, (error, { desc, temp, feelslike } = {}) => {
+    forecast(latitude, longitude, (error, { desc, temp, feelslike, windSpeed, humidity, observTime, icon_URL } = {}) => {
       if (error) {
         return res.send({
           error
         })
       }
-      const forecastMsg = `${desc}: The temperature is : ${temp} degrees and it feels like:${feelslike} degrees `
+      const forecastMsg = `${desc}: The temperature is : ${temp} degrees and it feels like:${feelslike} degrees \nWind speed: ${windSpeed} Km/h \nHumidity: ${humidity}%\n Observation time: ${observTime} `
       res.send({
         location,
-        forecastMsg
+        forecastMsg,
+        icon_URL
       })
 
     })

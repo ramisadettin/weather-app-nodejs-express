@@ -13,10 +13,18 @@ const forecast = (latitude, longitude, callback) => {
         const desc = find.weather_descriptions[0]
         const temp = find.temperature
         const feelslike = find.feelslike
+        const windSpeed = find.wind_speed
+        const humidity = find.humidity
+        const observTime = find.observation_time
+        const icon_URL = find.weather_icons[0]
         const data = {
           desc,
           temp,
-          feelslike
+          feelslike,
+          windSpeed,
+          humidity,
+          observTime,
+          icon_URL
         }
         callback(undefined, data)
       }
